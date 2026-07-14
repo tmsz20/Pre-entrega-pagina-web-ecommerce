@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "titulo": "Notebook Gamer Pro",
+    "precio": 1299999,
+    "imagen": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=600&q=80",
+    "categoria": "notebooks"
+  },
+  {
+    "id": 2,
+    "titulo": "Mouse Inalámbrico RGB",
+    "precio": 45999,
+    "imagen": "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=600&q=80",
+    "categoria": "perifericos"
+  },
+  {
+    "id": 3,
+    "titulo": "Teclado Mecánico Cherry MX",
+    "precio": 89999,
+    "imagen": "https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=600&q=80",
+    "categoria": "perifericos"
+  },
+  {
+    "id": 4,
+    "titulo": "PC Armada Gaming RTX 4070",
+    "precio": 2499999,
+    "imagen": "https://images.unsplash.com/photo-1593640408182-31c70c8268f5?w=600&q=80",
+    "categoria": "pcs"
+  },
+  {
+    "id": 5,
+    "titulo": "Monitor 27\" 165Hz IPS",
+    "precio": 349999,
+    "imagen": "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=600&q=80",
+    "categoria": "monitores"
+  },
+  {
+    "id": 6,
+    "titulo": "Auriculares Pro 7.1 Surround",
+    "precio": 129999,
+    "imagen": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600&q=80",
+    "categoria": "perifericos"
+  }
+]

@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="1337tech - Tu tienda de electrónica con los mejores productos tech: notebooks, PCs, periféricos y más.">
   <title>1337tech | Tienda de Electrónica</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -22,6 +24,14 @@
           <li><a href="#multimedia">Multimedia</a></li>
           <li><a href="#resenas">Reseñas</a></li>
           <li><a href="#contacto">Contacto</a></li>
+          <li>
+            <a href="#" class="btn btn-outline-light btn-sm position-relative mt-0 border-0 fs-6 fw-medium" data-bs-toggle="offcanvas" data-bs-target="#carritoOffcanvas">
+              🛒 Carrito
+              <span id="contador-carrito" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="font-size: 0.7rem;">
+                0
+              </span>
+            </a>
+          </li>
         </ul>
       </nav>
     </div>
@@ -45,68 +55,8 @@
          ======================================== -->
     <section id="productos">
       <h2 class="section-title">Nuestros Productos</h2>
-      <div class="products-grid">
-
-        <!-- Product 1: Notebook -->
-        <article class="product-card">
-          <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=600&q=80" alt="Notebook Gamer">
-          <div class="product-info">
-            <h3>Notebook Gamer Pro</h3>
-            <p class="price">$1.299.999</p>
-            <a href="#" class="btn">Comprar</a>
-          </div>
-        </article>
-
-        <!-- Product 2: Mouse -->
-        <article class="product-card">
-          <img src="https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=600&q=80" alt="Mouse Inalámbrico">
-          <div class="product-info">
-            <h3>Mouse Inalámbrico RGB</h3>
-            <p class="price">$45.999</p>
-            <a href="#" class="btn">Comprar</a>
-          </div>
-        </article>
-
-        <!-- Product 3: Teclado -->
-        <article class="product-card">
-          <img src="https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=600&q=80" alt="Teclado Mecánico">
-          <div class="product-info">
-            <h3>Teclado Mecánico Cherry MX</h3>
-            <p class="price">$89.999</p>
-            <a href="#" class="btn">Comprar</a>
-          </div>
-        </article>
-
-        <!-- Product 4: PC Armada -->
-        <article class="product-card">
-          <img src="https://images.unsplash.com/photo-1593640408182-31c70c8268f5?w=600&q=80" alt="PC Armada Gaming">
-          <div class="product-info">
-            <h3>PC Armada Gaming RTX 4070</h3>
-            <p class="price">$2.499.999</p>
-            <a href="#" class="btn">Comprar</a>
-          </div>
-        </article>
-
-        <!-- Product 5: Monitor -->
-        <article class="product-card">
-          <img src="https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=600&q=80" alt="Monitor 27 pulgadas">
-          <div class="product-info">
-            <h3>Monitor 27" 165Hz IPS</h3>
-            <p class="price">$349.999</p>
-            <a href="#" class="btn">Comprar</a>
-          </div>
-        </article>
-
-        <!-- Product 6: Auriculares -->
-        <article class="product-card">
-          <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600&q=80" alt="Auriculares Pro">
-          <div class="product-info">
-            <h3>Auriculares Pro 7.1 Surround</h3>
-            <p class="price">$129.999</p>
-            <a href="#" class="btn">Comprar</a>
-          </div>
-        </article>
-
+      <div id="productos-container" class="products-grid">
+        <!-- Los productos se cargarán dinámicamente con JavaScript -->
       </div>
     </section>
 
@@ -216,5 +166,32 @@
     </div>
   </footer>
 
+  <!-- Carrito Offcanvas (Bootstrap) -->
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="carritoOffcanvas" aria-labelledby="carritoOffcanvasLabel">
+    <div class="offcanvas-header bg-dark text-white">
+      <h5 id="carritoOffcanvasLabel">Tu Carrito de Compras</h5>
+      <button type="button" class="btn-close btn-close-white text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body d-flex flex-column">
+      <!-- Contenedor dinámico de los items -->
+      <div id="carrito-items" class="flex-grow-1 overflow-auto">
+        <p class="text-muted text-center mt-4">El carrito está vacío.</p>
+      </div>
+      <!-- Resumen del carrito -->
+      <div class="border-top pt-3 mt-3">
+        <h4 class="d-flex justify-content-between mb-3">
+          <span>Total:</span>
+          <span id="carrito-total" class="text-danger fw-bold">$0</span>
+        </h4>
+        <button class="btn btn-primary w-100 mb-2" id="btn-finalizar-compra">Finalizar Compra</button>
+        <button class="btn btn-outline-danger w-100" id="btn-vaciar-carrito">Vaciar Carrito</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Main JS -->
+  <script src="js/script.js"></script>
 </body>
 </html>
